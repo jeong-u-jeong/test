@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
+
+* {margin: 0; padding: 0;}
+a {text-decoration: none; color: white;}
+li {list-style: none;}
+html {font-size: 10px;}
+
+.wrap {
+    width: 100%;
+    background-color: #089EAE;
+    display: flex;
+    justify-content: end;
+}
+.wrap .menu_box {
+    width: 17%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.wrap .contents {
+    width: 80%;
+    height: 1040px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #EFF7F8;
+    font-family: 'Oxygen', sans-serif;
+}
+
+/* --------------logo--------------- */
+.wrap .menu_box {
+    margin: 0 20px;
+}
+.wrap .menu_box .logo_box {
+    width: 100%;
+    height: 75px;
+    display: flex;
+}
+.wrap .menu_box .logo_box .logo {
+    padding-top: 15px;
+}
+.wrap .menu_box .logo_box .logo img {
+    height: 45px;
+    float: left;
+}
+.wrap .menu_box .logo_box .title {
+    color: white;
+    font-size: 2.7rem;
+    font-family: 'Oxygen', sans-serif;
+    line-height: 45px;
+    margin-left: 10px;
+    float: left;
+}
+.wrap .menu_box .logo_box .btn_more i {
+    color: white;
+}
+
+/* --------------menu--------------- */
+.wrap .menu_box .menu {
+    color: white;
+    font-size: 1.6rem;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700;
+    padding-top: 10px;
+}
+.wrap .menu_box .menu h4 {
+    padding-left: 15px;
+    margin: 15px 0;
+}
+.wrap .menu_box .menu .main {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    font-weight: normal;
+    display: flex;
+    border-radius: 15px;
+    margin-top: 5px;
+}
+.wrap .menu_box .menu .main a {
+    display: block;
+    padding-left: 15px;
+}
+.wrap .menu_box .menu .main .new {
+    width: 30px;
+    height: 20px;
+    font-size: 1.0rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 20px;
+    background-color: #ED5F5C;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+.wrap .menu_box .menu .on {
+    background-color: white;
+}
+.wrap .menu_box .menu .on a {
+    color: #089EAE;
+}
+.wrap .menu_box .menu .main ul {display: none;}
+
+/* --------------header--------------- */
+.wrap .contents .header {
+    height: 70px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 30px;
+    overflow: hidden;
+}
+.wrap .contents .header .search {
+    width: 350px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #CEEBEE;
+    margin-top: 17.5px;
+    margin-left: 20px;
+    float: left;
+}
+.wrap .contents .header .search input {
+    width: 280px;
+    height: 35px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+    padding-left: 15px;
+}
+.wrap .contents .header .search input:focus {outline: none;}
+.wrap .contents .header .header_menu {
+    display: flex;
+    float: right;
+}
+.wrap .contents .header .header_menu i {
+    font-size: 2rem;
+}
+.wrap .contents .header .header_menu .lang_box .lang {
+    height: 20px;
+    display: flex;
+    color: #089EAE;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.wrap .contents .header .header_menu .lang_box .lang p {
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+.wrap .contents .header .header_menu .lang_box .lang i {
+    line-height: 20px;
+    margin-left: 8px;
+} 
+.wrap .contents .header .header_menu .lang_box .select_lang_box {
+    display: none;
+}
+.wrap .contents .header .header_menu .icon {
+    line-height: 70px;
+    margin-left: 32px;
+}
+.wrap .contents .header .header_menu .icon a {
+    color: #089EAE;
+}
+.wrap .contents .header .header_menu .user {
+    width: 180px;
+    height: 70px;
+    display: flex;
+}
+.wrap .contents .header .header_menu .user .user_img {
+    width: 50px;
+    height: 50px;
+    border: 50%;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: 32px;
+}
+.wrap .contents .header .header_menu .user .user_img img {width: 100%;}
+.wrap .contents .header .header_menu .user .user_name {
+    font-size: 2.0rem;
+    margin-left: 10px;
+    margin-top: 11px;
+}
+.wrap .contents .header .header_menu .user .user_name .state {
+    color: #089EAE;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+/* --------------container--------------- */
+.wrap .contents .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.wrap .contents .container .left {
+    width: calc(35% - 30px);
+    height: 500px;
+    margin-left: 30px;
+}
+.wrap .contents .container .left div {
+    width: 100%;
+}
+.wrap .contents .container .left .left_user {
+    margin-bottom: 30px;
+    height: 300px;
+    position: relative;
+}
+.wrap .contents .container .left .left_user .left_user_img {
+    width: 35%;
+    height: 35%;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(0, -50%);
+}
+.wrap .contents .container .left .left_user .left_user_img img {width: 100%;} 
+.wrap .contents .container .left .left_user .left_user_text {
+    width: 100%;
+    height: 200px;
+    padding-top: 100px;
+    background-color: white;
+}
+
+.wrap .contents .container .left .left_Goal {
+    height: 470px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.wrap .contents .container .right {
+    width: calc(65% - 60px);
+    height: 800px;
+    background-color: white;
+    margin-right: 30px;
+    border-radius: 20px;
+}   
+
+/* --------------footer--------------- */
+.wrap .contents .footer {
+    width: calc(100% - 60px);
+    height: 50px;
+    background-color: white;
+    margin: 30px;
+    border-radius: 20px;
+}
+.wrap .contents .footer .footer_menu {float: left;}
+.wrap .contents .footer .footer_menu li {float: left;}
+.wrap .contents .footer .footer_menu li a {
+    color: #888;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 50px;
+    margin-left: 30px;
+    transition: all 0.5s;
+}
+.wrap .contents .footer .footer_menu li:nth-child(2) a {
+    margin-left: 20px;
+}
+.wrap .contents .footer .footer_menu li a:hover {color: #089EAE;}
+.wrap .contents .footer .copyright {
+    color: #999;
+    font-size: 1.3rem;
+    line-height: 50px;
+    float: right;
+    margin-right: 30px;
+}
+.wrap .contents .footer .copyright span {
+    color: #089EAE;
+}
