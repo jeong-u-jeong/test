@@ -7,6 +7,8 @@
     <title>dashboard 4</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
     <div class="wrap">
@@ -19,7 +21,8 @@
                 <div class="btn_more"><i class="fa-regular fa-ellipsis"></i></div>
             </div>
             <ul class="menu"><h4>Dashboard</h4>
-                <li class="main"><a href="#!">Doctor Dashboard</a>
+                <li class="main">
+                    <a href="#!">Doctor Dashboard</a>
                     <ul>
                         <li class="sub"><a href="#!">Dashboard 1</a></li>
                         <li class="sub"><a href="#!">Dashboard 2</a></li>
@@ -28,8 +31,8 @@
                 </li>
                 <li class="main"><a href="#!">Hospital Dashboard 1</a></li>
                 <li class="main"><a href="#!">Hospital Dashboard 2</a></li>
-                <li class="main on"><a href="#!">Patient Dashboard</a></li>
-                <li class="main"><a href="#!">Covid-19 Dashboard</a><div class="new">New</div></li>
+                <li class="main"><a class="on" href="#!">Patient Dashboard</a></li>
+                <li class="main"><a href="#!">Covid-19 Dashboard<div class="new">New</div></a></li>
             </ul>
         </aside>
         <div class="contents">
@@ -38,19 +41,6 @@
                     <input type="text" placeholder="Type here to search...">
                 </div>
                 <div class="header_menu">
-                    <div class="lang_box">
-                        <div class="lang">
-                            <img src="./images/flag-01.png" alt="국가 이미지1">
-                            <p>English</p>
-                            <i class="fa-sharp fa-regular fa-chevron-down"></i>                        </div>
-                        <div class="select_lang_box">
-                            <div class="select_lang"><img src="./images/flag-02.png" alt="국가 이미지2"><p>French</p></div>
-                            <div class="select_lang"><img src="./images/flag-03.png" alt="국가 이미지3"><p>Spanish</p></div>
-                            <div class="select_lang"><img src="./images/flag-04.png" alt="국가 이미지4"><p>Italian</p></div>
-                            <div class="select_lang"><img src="./images/flag-05.png" alt="국가 이미지5"><p>German</p></div>
-                            <div class="select_lang"><img src="./images/flag-06.png" alt="국가 이미지6"><p>Japanese</p></div>
-                        </div>
-                    </div>
                     <div class="full_screen icon"><a href="#!"><i class="fa-solid fa-bell"></i></a></div>
                     <div class="notice icon"><a href="#!"><i class="fa-solid fa-bell"></i></a></div>
                     <div class="message icon"><a href="#!"><i class="fa-duotone fa-envelope-open"></i></a></div>
@@ -73,12 +63,117 @@
                             <img src="./images/user_l.png" alt="사용자 프로필 이미지2">
                         </div>
                         <div class="left_user_text">
-
+                            <div class="user_infor_1">
+                                <p class="nickname">Bess Willis</p>
+                                <p class="years">27 years, California</p>
+                            </div>
+                            <div class="user_infor_2">
+                                <div class="weight_box infor2">
+                                    <p class="weight_title infor2_title">Weight</p>
+                                    <p class="weight infor2_num">60kg</p>
+                                </div>
+                                <div class="height_box infor2">
+                                    <p class="height_title infor2_title">Height</p>
+                                    <p class="height infor2_num">170cm</p>
+                                </div>
+                                <div class="goal_box infor2">
+                                    <p class="goal_title infor2_title">Goal</p>
+                                    <p class="goal infor2_num">55kg</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="left_Goal"></div>
                 </div>
                 <div class="right">
+                    <div class="advice">
+                        <p class="advice_message">Advice! Connect your Apple Watch for better results.</p>
+                        <div class="advice_img"><img src="./images/37.png" alt="어드바이스 이미지"></div>
+                    </div>
+                    <div class="training_box">
+                        <p class="title_right">Popular Training</p>
+                        <div class="training">
+                            <div class="power training_item">
+                                <div class="training_img">
+                                    <img src="./images/34.png" alt="헬스 이미지">
+                                </div>
+                                <div class="training_text">
+                                    <p class="item_title">Power Training</p>
+                                    <p class="item_kcal">395 kcal / h</p>
+                                </div>
+                            </div>
+                            <div class="yoga training_item">
+                                <div class="training_img">
+                                    <img src="./images/35.png" alt="요가 이미지">
+                                </div>
+                                <div class="training_text">
+                                    <p class="item_title">Yoga Training</p>
+                                    <p class="item_kcal">395 kcal / h</p>
+                                </div>
+                            </div>
+                            <div class="stretching training_item">
+                                <div class="training_img">
+                                    <img src="./images/36.png" alt="스트레칭 이미지">
+                                </div>
+                                <div class="training_text">
+                                    <p class="item_title">Stretching</p>
+                                    <p class="item_kcal">395 kcal / h</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_second_box">
+                        <div class="statistic_box">
+                            <p class="title_right">Activity Statistic</p>
+                            <div class="graph"></div>
+                        </div>
+                        <div class="my_training_box">
+                            <p class="title_right">My Training</p>
+                            <a href="#!" class="btn_more"><p class="plus">+</p></a>
+                            <div class="my_training my_training1">
+                                <div class="my_training_name my_training_itme">
+                                    <p class="my_training_itme_title">Training</p>
+                                    <p class="my">TRX Cardio</p>
+                                </div>
+                                <div class="burned my_training_itme">
+                                    <p class="my_training_itme_title">Burned</p>
+                                    <p class="my">350 kcal</p>
+                                </div>
+                                <div class="spend my_training_itme">
+                                    <p class="my_training_itme_title">Spend</p>
+                                    <p class="my">1hr 45m</p>
+                                </div>
+                            </div>
+                            <div class="my_training my_training2">
+                                <div class="my_training_name my_training_itme">
+                                    <p class="my_training_itme_title">Training</p>
+                                    <p class="my">Stretching</p>
+                                </div>
+                                <div class="burned my_training_itme">
+                                    <p class="my_training_itme_title">Burned</p>
+                                    <p class="my">180 kcal</p>
+                                </div>
+                                <div class="spend my_training_itme">
+                                    <p class="my_training_itme_title">Spend</p>
+                                    <p class="my">30m</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_third_box">
+                        <div class="heart_box third_box">
+                            <p class="title_right">Heart Rate</p>
+                            <p class="bpm">75 bpm</p>
+                            <p class="zone">Health Zone</p>
+                            <div class="third_box_icon"><p class="icon">♥</p></div>
+                        </div>
+                        <div class="water_box third_box">
+                            <p class="title_right">Water Balance</p>
+                            <p class="drunk">Drunk</p>
+                            <p class="ml">1250 ml/ 2000 ml</p>
+                            <div class="third_box_icon"><p class="icon icon2">+</p></div>
+                        </div>
+                    </div>
 
                 </div>
             </section>
